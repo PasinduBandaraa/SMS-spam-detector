@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit_tags as tags
 
 import pickle
 import string
