@@ -7,6 +7,11 @@ from nltk.corpus import stopwords
 
 from nltk.stem.porter import PorterStemmer
 
+st.set_page_config(
+     page_title="SMS Spam",
+     page_icon="🅱️",
+)
+
 ps = PorterStemmer()
 
 
@@ -34,8 +39,18 @@ def transform_text(text):
     return " ".join(y)
 
 
+# tab1, tab2, tab3 = st.tabs(["Home", "SMS Classifier", "Awareness"])
+
+
+# with tab1:
+# st.title("Home")
+
+# with tab2:
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
+
+st.image('Logo.png')
+
 
 st.title("Email/SMS Spam Classifier")
 
